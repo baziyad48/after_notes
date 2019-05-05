@@ -11,7 +11,7 @@
       <div class="container">
         <div class="text-center" style="margin-top: 50px;">
           <img class="d-block mx-auto mb-4" src="<?php echo base_url("assets/images/favicon2.png"); ?>" width="100" height="72">
-          <h2>Edit Diary</h2>
+          <h2>Tambah Diary</h2>
         </div>
         <div class="container-fluid col-md-8 order-md-1">
           <form action="<?php echo base_url('Home/aksi_edit') ?>" method="post">
@@ -24,11 +24,11 @@
             </div>
             <div class="mb-3">
               <label>Tanggal</label>
-              <input type="date" class="form-control" name="date" value="<?php echo $post->date ?>" required>
+              <input type="date" class="form-control" name="date" value="<?php echo $post->date ?>">
             </div>
             <div class="mb-3">
               <label class="bio">Review</label>
-              <textarea class="form-control" rows="5" name="review"><?php echo $post->review ?></textarea>
+              <textarea class="form-control" rows="3" name="review"><?php echo $post->review ?></textarea>
             </div>
             <label>Rating</label>
             <div class="">

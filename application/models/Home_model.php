@@ -16,7 +16,7 @@ class Home_model extends CI_Model{
   {
     return $this->db->query("SELECT * FROM movie WHERE judul = '$where'");
   }
-  function tampil_discover($limit = 6)
+  function tampil_discover($limit = 4)
   {
     $this->db->order_by("year", "desc");
     $this->db->limit($limit);
