@@ -16,6 +16,7 @@ class Home extends CI_Controller{
   {
     $where = array('username=' => $this->session->userdata("nama"));
     $data['diary'] = $this->Home_model->tampil_data($where, 'diary')->result();
+    $data['film'] = $this->Home_model->tampil_discover();
     $this->load->view('home_view', $data);
   }
 
@@ -83,7 +84,14 @@ class Home extends CI_Controller{
   function tampil($id)
   {
     $where = $this->db->query("SELECT * FROM diary WHERE id = $id")->row()->judul;
-    $data['film'] = $this->Home_model->tampil_film($where, 'film')->result();
+    $data['film'] = $this->Home_model->tampil_film($where)->result();
+    $this->load->view('movie_view', $data);
+  }
+
+  function tampil_discover($id)
+  {
+    $where = array('id' => $id);
+    $data['film'] = $this->Home_model->tampil_data($where, 'movie')->result();
     $this->load->view('movie_view', $data);
   }
 
@@ -110,6 +118,11 @@ class Home extends CI_Controller{
 
     $this->Home_model->update_data($where, $data, 'user');
     redirect(base_url());
+  }
+
+  function discover(){
+      $data['film'] = $this->Home_model->tampil_discover(6);
+      $this->load->view('discover_view', $data);
   }
 
 }

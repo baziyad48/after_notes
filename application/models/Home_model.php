@@ -12,9 +12,16 @@ class Home_model extends CI_Model{
   {
     return $this->db->get_where($table, $where);
   }
-  function tampil_film($where, $table)
+  function tampil_film($where)
   {
     return $this->db->query("SELECT * FROM movie WHERE judul = '$where'");
+  }
+  function tampil_discover($limit = 6)
+  {
+    $this->db->order_by("year", "desc");
+    $this->db->limit($limit);
+    $query = $this->db->get("movie");
+    return $query->result();
   }
 
   function input_data($data, $table)
