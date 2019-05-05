@@ -53,7 +53,7 @@
                 <label class="form-check-label" for="inlineRadio5">5</label>
               </div>
             </div>
-            <input class="button-submit container btn-success btn-lg btn-block" type="submit" value="TAMBAH"></input>
+            <input class="button-submit container btn-success btn-lg btn-block" type="submit" value="SIMPAN"></input>
           </form>
         </div>
       </div>

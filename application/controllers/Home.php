@@ -121,7 +121,7 @@ class Home extends CI_Controller{
   }
 
   function discover(){
-      $data['film'] = $this->Home_model->tampil_discover(6);
+      $data['film'] = $this->Home_model->tampil_discover(12);
       $this->load->view('discover_view', $data);
   }
 
