@@ -1,27 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <?php $this->load->view('_partials/head.php'); ?>
   </head>
   <body>
-    <h1>Login disini!</h1>
-    <form action="<?php echo base_url('Login/aksi_login'); ?>" method="post">
-      <table>
-        <tr>
-          <td>Username</td>
-          <td><input type="text" name="username" required/></td>
-        </tr>
-        <tr>
-          <td>Password</td>
-          <td><input type="password" name="password" required/></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><input type="submit" value="Login"/></td>
-        </tr>
-      </table>
-    </form>
-    <p>Belum punya akun? <?php echo anchor('Login/register','Register'); ?></p>
+    <?php $this->load->view('_partials/home.php'); ?>
+    <?php $this->load->view('_partials/js.php'); ?>
   </body>
 </html>
