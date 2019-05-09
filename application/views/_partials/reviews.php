@@ -12,8 +12,9 @@
             <h4><?php echo anchor('Home/tampil/'.$post->id, $post->judul); ?></h4>
           </div>
           <div class="col-md-auto year my-auto">
-            <h4 class="tanggal"><?php echo $post->date ?></h4>
+            <h4 class="tanggal"><?php echo $post->date ?></h4>            
           </div>
+          
           <div class="col-md-auto rating">
             <?php for ($i=0; $i < $post->rating ; $i++) { ?>
               <span><i class="fas fa-star"></i></span>
