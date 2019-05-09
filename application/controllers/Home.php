@@ -35,6 +35,7 @@ class Home extends CI_Controller{
     $date = $this->input->post('date');
     $review = $this->input->post('review');
     $rating = $this->input->post('rating');
+    
 
     $data = array(
       'username' => $user,
