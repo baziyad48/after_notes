@@ -46,7 +46,7 @@ class Login extends CI_Controller{
   function aksi_register()
   {
     $username = $this->input->post('username');
-    $email = $this->input->post('email');
+    $email = $this->input->post( 'email');
     $password = $this->input->post('password');
 
     $data = array(
